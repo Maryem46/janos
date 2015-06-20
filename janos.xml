@@ -58,7 +58,7 @@
                       </block>
                     </value>
                     <statement name="DO0">
-                      <block type="movement_right" id="235"></block>
+                      <block type="movement_left" id="264"></block>
                     </statement>
                     <statement name="ELSE">
                       <block type="movement_forward" id="245"></block>

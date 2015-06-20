@@ -10,6 +10,7 @@
         </value>
         <statement name="DO">
           <block type="controls_if" id="61" inline="false">
+            <mutation else="1"></mutation>
             <value name="IF0">
               <block type="logic_compare" id="74" inline="true">
                 <field name="OP">LT</field>
@@ -26,39 +27,25 @@
               </block>
             </value>
             <statement name="DO0">
-              <block type="led_select" id="107" inline="true">
-                <field name="ACTION">FLASH</field>
-                <value name="LED">
-                  <block type="math_number" id="114">
-                    <field name="NUM">5</field>
-                  </block>
-                </value>
-              </block>
+              <block type="movement_right" id="178"></block>
+            </statement>
+            <statement name="ELSE">
+              <block type="movement_forward" id="142"></block>
             </statement>
             <next>
               <block type="robot_delay" id="116" inline="true">
                 <value name="DELAY">
                   <block type="math_number" id="123">
-                    <field name="NUM">150</field>
+                    <field name="NUM">200</field>
                   </block>
                 </value>
-                <next>
-                  <block type="movement_forward" id="142">
-                    <next>
-                      <block type="robot_delay" id="144" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="151">
-                            <field name="NUM">2000</field>
-                          </block>
-                        </value>
-                      </block>
-                    </next>
-                  </block>
-                </next>
               </block>
             </next>
           </block>
         </statement>
+        <next>
+          <block type="movement_stop" id="162"></block>
+        </next>
       </block>
     </next>
   </block>
